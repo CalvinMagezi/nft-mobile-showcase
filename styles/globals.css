@@ -1,3 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.banner {
+  background: url("../public/assets/banner.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.banner02 {
+  background: url("../public/assets/banner02.svg");
+  background-color: #0b65c6;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.banner03 {
+  background: url("../public/assets/banner03.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.banner04 {
+  background: url("../public/assets/banner04.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.fadeLeftMini {
+  animation: fadeLeftMini 1s;
+  animation-fill-mode: both;
+}
+
+.fadeRightMini {
+  animation: fadeRightMini 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeLeftMini {
+  0% {
+    opacity: 0;
+    transform: translate3d(-40%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes fadeRightMini {
+  0% {
+    opacity: 0;
+    transform: translate3d(40%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@layer components {
+  .whiteText{
+    @apply text-white
+  } 
+  .blackText{
+    @apply text-black
+  }
+  .bgWhite{
+    @apply bg-white
+  }
+  .bgPrimary{ @apply bg-primary}
+
+  .boxClass{ @apply flex-row md:flex-col}
+  .boxReverseClass{ @apply flex-row-reverse md:flex-col-reverse}
+
+  .textLeft{ @apply text-left}
+  .textRight{ @apply text-right}
+
+  .h1Text{ @apply font-bold font-IBMPlex text-5xl sm:text-4xl md:text-6xl minlg:text-8xl leading-12 md:leading-13}
+  .pText{ @apply my-5 md:my-10 font-IBMPlex font-light text-xl md:text-3xl minlg:text-4xl md:leading-16}
+  .descriptionText{ @apply my-5 md:my-10 font-IBMPlex font-light text-xl md:text-3xl minlg:text-4xl md:leading-16}
+  .btnText{ @apply text-white font-IBMPlex md:text-lg}
+
+  .btnPrimary{ @apply bg-primary mt-4 py-4 px-6 text-white text-lg md:text-2xl font-IBMPlex font-medium rounded-lg hover:shadow-2xl}
+  .btnBlack{ @apply bg-black flex items-center py-2 px-4 rounded-md mt-2 w-fit cursor-pointer}
+
+  .section{ @apply flex justify-center items-center p-16 sm:p-8}
+  .subSection{ @apply flex items-center w-full md:w-3/4}
+  .descDiv{ @apply flex-1 w-full flex justify-start flex-col md:mb-10 }
+
+  .flexCenter{ @apply flex justify-center items-center}
+  .flexWrap{ @apply flex justify-center flex-wrap}
+
+  .fullImg{ @apply w-full h-full object-cover}
+  .sectionImg{ @apply  w-96 h-96 object-contain}
+  .btnIcon{ @apply w-5 h-5 md:w-10 md:h-10 object-contain}
+
+  .featureImg{ @apply w-20 h-20 minlg:w-40 minlg:h-40 object-contain mb-1}
+  .featureText{ @apply font-semibold font-IBMPlex text-base minlg:text-3xl text-tertiary}
+  .featureCard{ @apply bg-white m-10 p-6 rounded-md flex justify-around items-center flex-col hover:shadow-lg cursor-pointer w-40 h-40 minlg:w-80 minlg:h-80}
+}
